@@ -63,7 +63,7 @@ export default function Footer() {
 
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/5 gap-4">
           <p className="text-white/20 text-xs font-medium">
-            © {new Date().getFullYear()} Kunal Awasthi. All rights reserved.
+            © {new Date().getFullYear()} Alex. All rights reserved.
           </p>
           <p className="text-white/20 text-xs font-medium flex items-center gap-2">
             Crafted with <span className="text-white/40">Vite + Framer Motion</span>
