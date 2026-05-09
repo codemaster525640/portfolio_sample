@@ -3,8 +3,8 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { motion } from 'motion/react';
-import { useEffect, useState } from 'react';
+import { motion } from "motion/react";
+import { useEffect, useState } from "react";
 
 export default function Splash({ onComplete }: { onComplete: () => void }) {
   const [progress, setProgress] = useState(0);
@@ -14,7 +14,7 @@ export default function Splash({ onComplete }: { onComplete: () => void }) {
       setProgress((prev) => {
         if (prev >= 100) {
           clearInterval(timer);
-          setTimeout(onComplete, 500);
+          setTimeout(onComplete, 1500);
           return 100;
         }
         return prev + 2;
@@ -35,16 +35,17 @@ export default function Splash({ onComplete }: { onComplete: () => void }) {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="relative mb-8 text-6xl font-bold tracking-tighter"
       >
-        <span className="text-white">K</span>
-        <span className="text-white/40">A</span>
+        <img src="/img/my_avatar.png"></img>
+        <span className="text-white">D</span>
+        <span className="text-white/40">B</span>
         <motion.div
-            initial={{ width: 0 }}
-            animate={{ width: "100%" }}
-            transition={{ duration: 1.5, ease: "easeInOut" }}
-            className="absolute -bottom-2 left-0 h-0.5 bg-white"
+          initial={{ width: 0 }}
+          animate={{ width: "100%" }}
+          transition={{ duration: 1.5, ease: "easeInOut" }}
+          className="absolute -bottom-2 left-0 h-0.5 bg-white"
         />
       </motion.div>
-      
+
       <div className="w-48 h-1 overflow-hidden rounded-full bg-white/10">
         <motion.div
           className="h-full bg-white"
@@ -52,7 +53,7 @@ export default function Splash({ onComplete }: { onComplete: () => void }) {
           animate={{ width: `${progress}%` }}
         />
       </div>
-      <motion.span 
+      <motion.span
         className="mt-2 text-[10px] uppercase tracking-[0.2em] text-white/50"
         animate={{ opacity: [0.3, 1, 0.3] }}
         transition={{ duration: 2, repeat: Infinity }}

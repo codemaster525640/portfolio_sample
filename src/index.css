@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
 @import "tailwindcss";
 
 @theme {
@@ -9,7 +9,7 @@
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
     @apply font-sans antialiased;
   }
@@ -27,23 +27,57 @@
   color: #000000 !important;
 }
 
-.resume-paper .text-gray-900 { color: #111827 !important; }
-.resume-paper .text-gray-800 { color: #1f2937 !important; }
-.resume-paper .text-gray-700 { color: #374151 !important; }
-.resume-paper .text-gray-600 { color: #4b5563 !important; }
-.resume-paper .text-gray-500 { color: #6b7280 !important; }
-.resume-paper .text-gray-400 { color: #9ca3af !important; }
-.resume-paper .bg-white { background-color: #ffffff !important; }
-.resume-paper .bg-black { background-color: #000000 !important; }
-.resume-paper .text-black { color: #000000 !important; }
-.resume-paper .bg-black\/10 { background-color: rgba(0, 0, 0, 0.1) !important; }
-.resume-paper .bg-gray-50 { background-color: #f9fafb !important; }
-.resume-paper .bg-gray-100 { background-color: #f3f4f6 !important; }
-.resume-paper .bg-gray-300 { background-color: #d1d5db !important; }
-.resume-paper .border-black { border-color: #000000 !important; }
-.resume-paper .border-gray-100 { border-color: #f3f4f6 !important; }
-.resume-paper .border-gray-300 { border-color: #d1d5db !important; }
-.resume-paper .bg-gray-200 { background-color: #e5e7eb !important; }
+.resume-paper .text-gray-900 {
+  color: #111827 !important;
+}
+.resume-paper .text-gray-800 {
+  color: #1f2937 !important;
+}
+.resume-paper .text-gray-700 {
+  color: #374151 !important;
+}
+.resume-paper .text-gray-600 {
+  color: #4b5563 !important;
+}
+.resume-paper .text-gray-500 {
+  color: #6b7280 !important;
+}
+.resume-paper .text-gray-400 {
+  color: #9ca3af !important;
+}
+.resume-paper .bg-white {
+  background-color: #ffffff !important;
+}
+.resume-paper .bg-black {
+  background-color: #000000 !important;
+}
+.resume-paper .text-black {
+  color: #000000 !important;
+}
+.resume-paper .bg-black\/10 {
+  background-color: rgba(0, 0, 0, 0.1) !important;
+}
+.resume-paper .bg-gray-50 {
+  background-color: #f9fafb !important;
+}
+.resume-paper .bg-gray-100 {
+  background-color: #f3f4f6 !important;
+}
+.resume-paper .bg-gray-300 {
+  background-color: #d1d5db !important;
+}
+.resume-paper .border-black {
+  border-color: #000000 !important;
+}
+.resume-paper .border-gray-100 {
+  border-color: #f3f4f6 !important;
+}
+.resume-paper .border-gray-300 {
+  border-color: #d1d5db !important;
+}
+.resume-paper .bg-gray-200 {
+  background-color: #e5e7eb !important;
+}
 
 /* Print Styles for Resume Generation */
 @media print {
@@ -51,14 +85,15 @@
     margin: 1cm;
     size: A4;
   }
-  
+
   body {
     background: white !important;
     color: black !important;
     visibility: hidden;
   }
-  
-  .resume-paper, .resume-paper * {
+
+  .resume-paper,
+  .resume-paper * {
     visibility: visible;
   }
 
@@ -71,17 +106,26 @@
     margin: 0 !important;
     box-shadow: none !important;
   }
-  
+
   .no-print {
     display: none !important;
     visibility: hidden !important;
   }
-  
-  nav, footer, .splash, canvas, button, a[href^="#"], .fixed {
+
+  nav,
+  footer,
+  .splash,
+  canvas,
+  button,
+  a[href^="#"],
+  .fixed {
     display: none !important;
   }
 
-  h1, h2, h3, h4 {
+  h1,
+  h2,
+  h3,
+  h4 {
     color: black !important;
     background: none !important;
     -webkit-text-fill-color: initial !important;
@@ -91,4 +135,3 @@
 .no-print {
   /* Utility class for elements to hide during print */
 }
-

@@ -3,15 +3,18 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { motion } from 'motion/react';
-import { ArrowRight, Download } from 'lucide-react';
-import { RESUME_DATA } from '../constants';
+import { motion } from "motion/react";
+import { ArrowRight, Download } from "lucide-react";
+import { RESUME_DATA } from "../constants";
 
 export default function Hero({ onOpenResume }: { onOpenResume: () => void }) {
   const { basics } = RESUME_DATA;
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center pt-20 overflow-hidden"
+    >
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl">
           <motion.div
@@ -24,7 +27,7 @@ export default function Hero({ onOpenResume }: { onOpenResume: () => void }) {
             </span>
           </motion.div>
 
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -41,7 +44,7 @@ export default function Hero({ onOpenResume }: { onOpenResume: () => void }) {
           >
             {basics.title}
           </motion.p>
-          
+
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -57,15 +60,18 @@ export default function Hero({ onOpenResume }: { onOpenResume: () => void }) {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="flex flex-wrap gap-6"
           >
-            <a 
+            <a
               href="#experience"
               className="group flex items-center space-x-3 px-8 py-4 bg-white text-black rounded-full font-bold hover:scale-105 transition-all duration-300"
             >
               <span>View Experience</span>
-              <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+              <ArrowRight
+                size={18}
+                className="group-hover:translate-x-1 transition-transform"
+              />
             </a>
-            
-            <button 
+
+            <button
               onClick={onOpenResume}
               className="group flex items-center space-x-3 px-8 py-4 border border-white/10 hover:bg-white/5 backdrop-blur-sm rounded-full font-bold hover:scale-105 transition-all duration-300"
             >
