@@ -46,7 +46,7 @@ export default function Navbar() {
       >
         <div className="container mx-auto px-6 flex items-center justify-between">
           <motion.a
-            href="#home"
+            href=""
             className="text-2xl font-bold tracking-tighter"
             whileHover={{ scale: 1.05 }}
           >
