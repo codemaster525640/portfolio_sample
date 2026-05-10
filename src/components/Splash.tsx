@@ -5,6 +5,7 @@
 
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
+import avatar from "../assets/my_avatar.png";
 
 export default function Splash({ onComplete }: { onComplete: () => void }) {
   const [progress, setProgress] = useState(0);
@@ -35,7 +36,7 @@ export default function Splash({ onComplete }: { onComplete: () => void }) {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="relative mb-8 text-6xl font-bold tracking-tighter"
       >
-        <img src="/img/my_avatar.png"></img>
+        <img src={avatar}></img>
         <span className="text-white">D</span>
         <span className="text-white/40">B</span>
         <motion.div

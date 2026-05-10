@@ -162,16 +162,16 @@ export const RESUME_DATA: ResumeData = {
     {
       name: "Oracle Certified Expert, EE 6 Web Services Developer",
       // url: "https://training.fortinet.com/pluginfile.php/1/tool_certificate/issues/1776360640/2583055293KA.pdf",
-      url: "/img/new_1.png",
+      url: `${import.meta.env.BASE_URL}img/new_1.png`,
     },
     {
       name: "Oracle Certified Expert, Java Platfrom, EE 6 Web Component Developer",
-      url: "/img/new_2.png",
+      url: `${import.meta.env.BASE_URL}img/new_2.png`,
       // url: "https://training.fortinet.com/pluginfile.php/1/tool_certificate/issues/1776691816/1748126449KA.pdf",
     },
     {
       name: "Oracle Certified Professional Java SE 7 Programmer",
-      url: "/img/new_3.png",
+      url: `${import.meta.env.BASE_URL}img/new_3.png`,
       // url: "https://www.oneroadmap.io/skills/da/certificate/CERT-58F963A2",
     },
   ],

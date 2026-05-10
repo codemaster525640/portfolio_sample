@@ -3,9 +3,9 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { motion } from 'motion/react';
-import { ExternalLink } from 'lucide-react';
-import { RESUME_DATA } from '../constants';
+import { motion } from "motion/react";
+import { ExternalLink } from "lucide-react";
+import { RESUME_DATA } from "../constants";
 
 export default function Skills() {
   const { skills, certifications } = RESUME_DATA;
@@ -19,13 +19,19 @@ export default function Skills() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <span className="text-[10px] uppercase tracking-[0.3em] text-white/30 block mb-4">Core Competencies</span>
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tighter mb-12">Skills & Technologies</h2>
-            
+            <span className="text-[10px] uppercase tracking-[0.3em] text-white/30 block mb-4">
+              Core Competencies
+            </span>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tighter mb-12">
+              Skills & Technologies
+            </h2>
+
             <div className="space-y-12">
               {Object.entries(skills).map(([category, items], index) => (
                 <div key={category}>
-                  <h3 className="text-xs uppercase tracking-[0.2em] text-white/30 mb-6 font-semibold">{category}</h3>
+                  <h3 className="text-xs uppercase tracking-[0.2em] text-white/30 mb-6 font-semibold">
+                    {category}
+                  </h3>
                   <div className="flex flex-wrap gap-3">
                     {items.map((skill, sIndex) => (
                       <motion.span
@@ -34,7 +40,10 @@ export default function Skills() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ delay: sIndex * 0.05 }}
-                        whileHover={{ y: -5, backgroundColor: 'rgba(255,255,255,0.08)' }}
+                        whileHover={{
+                          y: -5,
+                          backgroundColor: "rgba(255,255,255,0.08)",
+                        }}
                         className="px-6 py-3 rounded-2xl border border-white/5 bg-white/[0.03] text-sm font-medium backdrop-blur-sm transition-all"
                       >
                         {skill}
@@ -52,7 +61,9 @@ export default function Skills() {
             viewport={{ once: true }}
             className="p-12 rounded-[3rem] border border-white/5 bg-linear-to-br from-white/[0.03] to-transparent"
           >
-            <h3 className="text-xl font-bold mb-8">Professional Certifications</h3>
+            <h3 className="text-xl font-bold mb-8">
+              Professional Certifications
+            </h3>
             <div className="space-y-4">
               {certifications.map((cert, index) => (
                 <motion.a
@@ -76,43 +87,58 @@ export default function Skills() {
                     </span>
                   </div>
                   {cert.url && (
-                    <ExternalLink size={14} className="text-white/20 group-hover:text-white transition-colors" />
+                    <ExternalLink
+                      size={14}
+                      className="text-white/20 group-hover:text-white transition-colors"
+                    />
                   )}
                 </motion.a>
               ))}
             </div>
 
             <div className="mt-12 p-8 rounded-3xl bg-white text-black">
-                <div className="flex justify-between items-start mb-2">
-                    <div>
-                        <p className="text-xs uppercase tracking-widest font-black mb-1">Featured Project</p>
-                        <h4 className="text-xl font-bold">{RESUME_DATA.projects[0].title}</h4>
-                    </div>
-                    {RESUME_DATA.projects[0].certificateUrl && (
-                        <a 
-                            href={RESUME_DATA.projects[0].certificateUrl} 
-                            target="_blank" 
-                            rel="noreferrer"
-                            className="bg-black text-white p-2 rounded-lg hover:scale-110 transition-transform"
-                            title="View Presentation Certificate"
-                        >
-                            <ExternalLink size={16} />
-                        </a>
-                    )}
+              <div className="flex justify-between items-start mb-2">
+                <div>
+                  <p className="text-xs uppercase tracking-widest font-black mb-1">
+                    Featured Project
+                  </p>
+                  <h4 className="text-xl font-bold">
+                    {RESUME_DATA.projects[0].title}
+                  </h4>
                 </div>
-                <div className="flex flex-wrap gap-2 mb-4">
-                    {RESUME_DATA.projects[0].stack.map(s => (
-                        <span key={s} className="text-[10px] px-2 py-0.5 rounded-full bg-black/10 font-bold uppercase">{s}</span>
-                    ))}
-                </div>
-                <ul className="space-y-3">
-                    {RESUME_DATA.projects[0].bullets.map((bullet, i) => (
-                        <li key={i} className="text-sm opacity-80 leading-relaxed flex items-start space-x-2">
-                            <span className="mt-1.5 w-1 h-1 rounded-full bg-black/20 shrink-0" />
-                            <span>{bullet}</span>
-                        </li>
-                    ))}
-                </ul>
+                {RESUME_DATA.projects[0].certificateUrl && (
+                  <a
+                    href={RESUME_DATA.projects[0].certificateUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="bg-black text-white p-2 rounded-lg hover:scale-110 transition-transform"
+                    title="View Presentation Certificate"
+                  >
+                    <ExternalLink size={16} />
+                  </a>
+                )}
+              </div>
+              <div className="flex flex-wrap gap-2 mb-4">
+                {RESUME_DATA.projects[0].stack.map((s) => (
+                  <span
+                    key={s}
+                    className="text-[10px] px-2 py-0.5 rounded-full bg-black/10 font-bold uppercase"
+                  >
+                    {s}
+                  </span>
+                ))}
+              </div>
+              <ul className="space-y-3">
+                {RESUME_DATA.projects[0].bullets.map((bullet, i) => (
+                  <li
+                    key={i}
+                    className="text-sm opacity-80 leading-relaxed flex items-start space-x-2"
+                  >
+                    <span className="mt-1.5 w-1 h-1 rounded-full bg-black/20 shrink-0" />
+                    <span>{bullet}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </motion.div>
         </div>
